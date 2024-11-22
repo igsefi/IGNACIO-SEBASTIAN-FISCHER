@@ -11,6 +11,7 @@ min-height: 100vh;
 }
 h1 {
     color: #000000;
+    padding: 3%;
 }
 
 h2 {
@@ -116,30 +117,58 @@ li :hover {
     margin: 3% auto;
     color: #ffffff;
 }
+.maquinas {
+    display: grid;
+    grid-template-columns: 1fr 1fe 1fr;
+    gap: 20px;
+
+    
+}
 .h1_productos{
     text-align: center;
 }
+
 .productos_containter {
-    display: flex;
+   /* display: flex;
     flex-flow: row wrap;
     width: 80%;
+    margin: 0 auto;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 80%;
     margin: 0 auto;
-
 }
 .prod_box{
     border: #e3e3e3 solid 1px;
-    width: 30%;
-    padding: 2%;
-    margin:  1%;
+    padding: 5%;
     text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.p_prod {
+    padding: 7% 3%;
+}
+.btn {
+    background-color: #ff0000;
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    padding: 4% 3%;
+    color: #ffffff;
+    border-radius: 5px;
 }
 .wp{
     width: 100%;
+    margin: 0 auto;
 }
 footer {
     background-color:#e2e2e2;
     align-items: center;
     height: 162vh;
+    margin-top: 30px;
     
 }
 .container_footer {
@@ -172,9 +201,9 @@ a {
 }
 .contact_form {
     width: 40%;
-    margin: 5% 0;
+    margin: 5% auto;
 }
-}
+
 .contacto {
     margin: 2vw 0;
 }
@@ -182,4 +211,26 @@ a {
     color: #000000;
 }
 
-
+@media (max-width: 1000px){
+    .container_footer{
+        flex-flow: column wrap;
+    }
+    .productos_containter {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .wp{
+        width: 50%;
+    }
+}
+@media (max-width: 800px){
+    .productos_containter {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .wp{
+        width: 50%;
+    }
+}
